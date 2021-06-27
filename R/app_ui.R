@@ -10,7 +10,8 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic 
     fluidPage(
-      h1("d_and_d_roller")
+      h1("d_and_d_roller"),
+      mod_dice_roller_ui("dice_roller_ui_1")
     )
   )
 }
@@ -30,7 +31,7 @@ golem_add_external_resources <- function(){
   )
  
   tags$head(
-    favicon(),
+    favicon(ext = 'png'),
     bundle_resources(
       path = app_sys('app/www'),
       app_title = 'd_and_d_roller'
