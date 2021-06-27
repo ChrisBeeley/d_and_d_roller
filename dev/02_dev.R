@@ -13,6 +13,8 @@
 
 # Engineering
 
+usethis::use_pipe()
+
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
 usethis::use_package( "ggplot2" )
