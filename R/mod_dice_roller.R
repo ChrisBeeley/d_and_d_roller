@@ -28,7 +28,9 @@ mod_dice_roller_ui <- function(id){
       ),
       column(9, 
              plotOutput(ns("distribution")))
-    )
+    ),
+    a(href = "https://github.com/ChrisBeeley/d_and_d_roller", 
+      "Link to GitHub")
   )
 }
 
