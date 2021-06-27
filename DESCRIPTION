@@ -1,0 +1,18 @@
+Package: d_and_d_roller
+Title: D & D roller
+Version: 0.0.0.9000
+Authors@R: person('Chris', 'Beeley', email = 'chris.beeley@gmail.com', role = c('cre', 'aut'))
+Description: This is a very simple Shiny application which 
+  rolls Dungeons and Dragons dice a thousand times because my friends 
+  and I often don't have a good intuitive sense of what, say, the 
+  distribution of 4 ten sided dice will look like. I may add support 
+  for adding together different dice, for example our Paladin rolls D10 
+  and D4 for damage.
+License: GPL (>= 3)
+Imports: 
+    config (>= 0.3.1),
+    golem (>= 0.3.1),
+    shiny (>= 1.6.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
