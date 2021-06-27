@@ -23,7 +23,10 @@ mod_dice_roller_ui <- function(id){
                                         "D12" = 12,
                                         "D20" = 20))
       ),
-      column(10, 
+      column(1, numericInput(ns("plus"), "+",
+                             value = 0, min = 0, max = 10)
+      ),
+      column(9, 
              plotOutput(ns("distribution")))
     )
   )
@@ -38,13 +41,9 @@ mod_dice_roller_server <- function(id){
     
     output$distribution <- renderPlot({
       
-      cat(str(input$dice))
-      
-      cat(str(input$number_dice))
-      
       x <- data.frame("x" = replicate(
         1000, sum(sample(as.numeric(input$dice), 
-                         input$number_dice, replace = TRUE))
+                         input$number_dice, replace = TRUE)) + input$plus
       ))
       
       x %>% 
